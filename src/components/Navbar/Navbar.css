@@ -1,0 +1,39 @@
+@import url("../../App.css");
+
+.home-navbar {
+  background-color: var(--white-shade);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.search-bar {
+  background-color: var(--white-shade);
+  border-radius: 5px;
+  padding-left: 5rem;
+  font-size: 1.6rem;
+}
+
+.nav-heart-icon,
+.nav-cart-icon,
+.nav-logout-icon {
+  font-size: 3rem;
+}
+
+.nav-search-container {
+  position: relative;
+}
+
+.nav-search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 1.2rem;
+  font-size: 2rem;
+}
+
+.nav-btn {
+  border-radius: 5px;
+  color: var(--white-shade);
+}
+
+.nav-logout-icon {
+  margin-left: 1rem;
+}

@@ -1,19 +1,21 @@
 import {useEffect, useState} from 'react';
 import "./FinalFilterProduct.css";
-import {products} from "../../../backend/db/products";
 import { ProductListCard } from "../../../components/ProductListCard/ProductListCard";
-import { useProduct } from "../../../Context/productContext";
+import {filterCategory} from "../../Sidebar/SidebarFilter/index"
+// import { FilterByBrand, FilterByRating, FilterByCategory, FilterByPriceHighLow, FilterByPrice, FilterByRating } from "../../Sidebar/SidebarFilter/index";
 import { FilterByBrand } from "../SidebarFilter/FilterByBrand";
 import { FilterByDiscount } from "../SidebarFilter/FilterByDiscount";
 import { FilterByPriceHighLow } from "../SidebarFilter/FilterByPriceHighLow";
 import { FilterByPrice } from "../SidebarFilter/FilterByPrice";
 import { FilterByRating } from "../SidebarFilter/FilterByRating";
 import { FilterByCategory } from "../SidebarFilter/FilterByCategory";
+import { useProduct } from "../../../Context/productContext";
 import axios from 'axios';
 
 export function FinalFilterProduct() {
+
   const { filterState } = useProduct();
-  const [productsList, setProductsList] = useState();
+        const [productsList, setProductsList] = useState();
 
   console.log(productsList);
 
@@ -29,12 +31,7 @@ export function FinalFilterProduct() {
     }
     
     fetchData();
-
-
-  
   },[]);
-
-  
 
   const filterRating = FilterByRating(productsList, filterState.rating);
 
@@ -62,8 +59,7 @@ export function FinalFilterProduct() {
   );
   
 console.log(filterCategory)
-
-
+  
   return (
     <div className="container-wrapper">
       <div className="result-wrapper">

@@ -1,12 +1,12 @@
-@import url("../../App.css");
+@import url("../../assets/css/reset.css");
 
 .home-navbar {
-  background-color: var(--white-shade);
+  background-color: var(--white);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .search-bar {
-  background-color: var(--white-shade);
+  background-color: var(--white);
   border-radius: 5px;
   padding-left: 5rem;
   font-size: 1.6rem;
@@ -16,6 +16,8 @@
 .nav-cart-icon,
 .nav-logout-icon {
   font-size: 3rem;
+  margin-right: 1.5rem;
+  padding: 0rem;
 }
 
 .nav-search-container {
@@ -32,6 +34,7 @@
 .nav-btn {
   border-radius: 5px;
   color: var(--white-shade);
+  margin-right: 1.5rem;
 }
 
 .nav-logout-icon {

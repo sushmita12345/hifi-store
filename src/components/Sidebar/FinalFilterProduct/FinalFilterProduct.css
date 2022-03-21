@@ -30,10 +30,6 @@
   font-size: 2rem;
   font-weight: 700;
 }
-/* .card-container {
-    width: 100%;
-    position: relative;
-  } */
 
 .product-card-wrapper {
   height: 100%;
@@ -222,13 +218,6 @@
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
-
-/* .product-remove {
-    position: absolute;
-    right: 0.5rem;
-    top: 0.5rem;
-    font-size: 2rem;
-  } */
 
 @media screen and (max-width: 1040px) {
   html {

@@ -7,13 +7,16 @@ import dress from '../../assets/Image/Header/main-dress.webp';
 import mainImage from '../../assets/Image/MainImage/main-Image.jpg';
 import summer from '../../assets/Image/Header/main-summer.webp';
 import winter from '../../assets/Image/Header/main-winter.webp';
+import {Link} from 'react-router-dom'
+import { useProduct } from '../../Context/productContext';
 
 
 export function Header() {
+    const {filterDispatch} = useProduct();
     return (
         <div className="container">
-            <div className="upper-section-1">
-                <img className="upper-image" src={saree} />
+           <div className="upper-section-1">
+                <Link to = "/product"> <img className="upper-image" src={saree} /></Link>
                 <div className="upper-btn">Saree</div>
             </div>
             <div className="upper-section-2">

@@ -1,6 +1,5 @@
 import { MdiStar, MdiCart } from "../../assets/Icon/icon";
 import { useProduct } from "../../Context/productContext";
-// import  img1 from "../../assets/Image/ProductListCard/img1.webp";
 export function ProductListCard({ details }) {
   const {
     filterState: { cart, wishlist },

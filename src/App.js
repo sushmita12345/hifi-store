@@ -1,12 +1,29 @@
 import "./App.css";
-import {Home} from './pages/HomePage/Home';
-// import {Navbar} from './components/Navbar/navbar';
-// import {Header} from './components/Header/Header';
+import {useEffect} from 'react';
+import {Navbar} from './components/Navbar/Navbar';
+import {Header} from './components/Header/Header';
+import { Route, Routes } from "react-router-dom";
+import Mockman from '../src/assets/Mockman'
+import {ProductList} from "../src/pages/ProductList/ProductList"
+
+
+
+
 
 function App() {
+
+ 
   return (
     <div className="App">
-      <Home />
+    
+
+      <Navbar />
+
+      <Routes>
+        <Route  exact path="/" element={<Header />} />
+        <Route path="/product" element={<ProductList />} />
+        <Route path="/mock-api" element={<Mockman />} />
+        </Routes>
     </div>
   );
 }

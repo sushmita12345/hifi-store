@@ -15,7 +15,7 @@ export function Navbar() {
       </div>
       <div className="btn-left">
         <button class="nav-btn">Login</button>
-        <IcRoundFavoriteBorder className="nav-heart-icon" />
+        <Link to="/wishlist"><IcRoundFavoriteBorder className="nav-heart-icon" /></Link>
         <Link to="/cart"><IcOutlineShoppingCart className="nav-cart-icon" /></Link>
         {/* <IcRoundLogout className="nav-logout-icon"/> */}
       </div>

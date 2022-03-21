@@ -84,7 +84,6 @@
 
 .mid-main {
   grid-area: m;
-  /* background-color: #d3d3d3; */
   position: relative;
 }
 
@@ -127,7 +126,6 @@
 
 .lower-section-1 {
   grid-area: l1;
-  /* border: 1px solid #d3d3d3; */
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border: none;
   width: 100%;
@@ -147,7 +145,6 @@
 
 .lower-section-2 {
   grid-area: l2;
-  /* border: 1px solid #d3d3d3; */
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   width: 100%;
 }

@@ -1,8 +1,6 @@
 import {useEffect, useState} from 'react';
 import "./FinalFilterProduct.css";
 import { ProductListCard } from "../../../components/ProductListCard/ProductListCard";
-import {filterCategory} from "../../Sidebar/SidebarFilter/index"
-// import { FilterByBrand, FilterByRating, FilterByCategory, FilterByPriceHighLow, FilterByPrice, FilterByRating } from "../../Sidebar/SidebarFilter/index";
 import { FilterByBrand } from "../SidebarFilter/FilterByBrand";
 import { FilterByDiscount } from "../SidebarFilter/FilterByDiscount";
 import { FilterByPriceHighLow } from "../SidebarFilter/FilterByPriceHighLow";

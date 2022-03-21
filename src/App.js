@@ -5,6 +5,7 @@ import {Header} from './components/Header/Header';
 import { Route, Routes } from "react-router-dom";
 import Mockman from '../src/assets/Mockman'
 import {ProductList} from "../src/pages/ProductList/ProductList"
+import {Cart} from "../src/pages/CartPage/Cart"
 
 
 
@@ -22,6 +23,7 @@ function App() {
       <Routes>
         <Route  exact path="/" element={<Header />} />
         <Route path="/product" element={<ProductList />} />
+        <Route path="/cart" element={<Cart />} />
         <Route path="/mock-api" element={<Mockman />} />
         </Routes>
     </div>

@@ -1,0 +1,270 @@
+/* @import "/assets/css/reset.css"; */
+
+.my-cart-text {
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.product-bill {
+  display: flex;
+}
+.all-cart-product {
+  display: flex;
+  flex-direction: column;
+}
+.card-2 {
+  background-color: var(--white);
+}
+
+.cart-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--back-grey);
+}
+
+.cart-empty-msg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.cart-bill {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+}
+
+.product-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cart-wrapper {
+  width: 25vw;
+  height: 40%;
+  margin-left: 5rem;
+
+  background-color: var(--white);
+}
+
+.price-detail {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.product-count {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.cart-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-rupee {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.total-amount {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.product-rupee-bold {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.savings-text {
+  display: flex;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.bill-rupee-icon {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.total-rupee-icon {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.last-text {
+  padding-left: 4px;
+}
+
+.order-btn {
+  background-color: var(--login-blue);
+  color: var(--white);
+  height: 3rem;
+  border: none;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.quantity-count {
+  padding-left: 0.7rem;
+}
+
+/* new horizontal card */
+
+.horizontal-wrapper {
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.horizontal-card {
+  display: flex;
+  flex-direction: row;
+  width: 40vw;
+  height: 100%;
+  border: 1px solid grey;
+  margin-bottom: 3rem;
+  border: none;
+}
+
+.horizontal-card-a {
+  width: 30%;
+}
+
+.cart-image {
+  width: 100%;
+  height: 100%;
+}
+
+.horizontal-card-b {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin-left: 2rem;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.horizontal-cart-card {
+  position: relative;
+}
+
+.product-remove {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+}
+
+.cart-option {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1.5rem;
+  width: 4rem;
+}
+
+/* .horizontal-card {
+    display: flex;
+    flex-direction: row;
+    width: 35vw;
+    height: 100%;
+    border: 1px solid grey;
+    margin-bottom: 3rem;
+    border: none;
+  }
+  
+  .horizontal-cart-card {
+    height: 60%;
+  }
+  
+  .horizontal-wrapper {
+    padding: 2rem;
+    display: flex;
+    width: 100%;
+  }
+  
+  .product-image {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .cart-image {
+    width: 50%;
+  }
+  
+  .horizontal-card-a {
+    width: 50%;
+  }
+  
+  .horizontal-card-b {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    margin-left: 2rem;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .horizontal-cart-btn,
+  .horizontal-wish-btn {
+    width: 100%;
+  } */
+
+@media screen and (max-width: 1040px) {
+  .horizontal-cart-card {
+    width: 75%;
+  }
+  .product-bill {
+    display: flex;
+    flex-direction: column;
+  }
+  .cart-wrapper {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .horizontal-cart-card {
+    width: 80%;
+  }
+  .cart-wrapper {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .horizontal-cart-card {
+    width: 90%;
+  }
+  .cart-wrapper {
+    width: 80%;
+  }
+  .horizontal-card-a {
+    width: 100%;
+  }
+}

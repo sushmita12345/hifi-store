@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
 import { MdiCurrencyInr } from "../../assets/Icon/icon";
-import { useProduct } from '../../Context/productContext';
+import { useProduct } from '../../Context/productContext.jsx';
 
 export function CartPrice() {
 

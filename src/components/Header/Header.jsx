@@ -1,5 +1,5 @@
 import React from 'react';
-import './Header.css';
+import './header.css';
 import saree from '../../assets/Image/Header/main-saree.webp';
 import sweatshirt from '../../assets/Image/Header/main-sweatshirt.webp';
 import kurta from '../../assets/Image/Header/main-kurta.jpeg';
@@ -8,7 +8,7 @@ import mainImage from '../../assets/Image/MainImage/main-Image.jpg';
 import summer from '../../assets/Image/Header/main-summer.webp';
 import winter from '../../assets/Image/Header/main-winter.webp';
 import {Link} from 'react-router-dom'
-import { useProduct } from '../../Context/productContext';
+import { useProduct } from '../../Context/productContext.jsx';
 
 
 export function Header() {

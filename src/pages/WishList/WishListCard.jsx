@@ -1,5 +1,5 @@
 import { MdiClose, MdiStar } from "../../assets/Icon/icon";
-import "./WishList.css";
+import "./wishList.css";
 
 export function WishListCard({wishlistDetail}) {
 

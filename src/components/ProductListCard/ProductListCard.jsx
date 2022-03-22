@@ -1,5 +1,5 @@
 import { MdiStar, MdiCart } from "../../assets/Icon/icon";
-import { useProduct } from "../../Context/productContext";
+import { useProduct } from "../../Context/productContext.jsx";
 export function ProductListCard({ details }) {
   const {
     filterState: { cart, wishlist },

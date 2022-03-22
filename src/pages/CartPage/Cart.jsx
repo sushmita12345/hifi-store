@@ -1,7 +1,7 @@
-import { useProduct } from "../../Context/productContext";
-import "./Cart.css";
-import {CartCard} from "../CartPage/CartCard"
-import { CartPrice } from "./CartPrice";
+import { useProduct } from "../../Context/productContext.jsx";
+import "./cart.css";
+import {CartCard} from "./CartCard.jsx"
+import { CartPrice } from "./CartPrice.jsx";
 
 export function Cart() {
     const {

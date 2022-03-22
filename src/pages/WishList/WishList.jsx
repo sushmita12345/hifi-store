@@ -1,6 +1,6 @@
-import "./WishList.css";
-import { useProduct } from "../../Context/productContext";
-import {WishListCard} from "../WishList/WishListCard";
+import "./wishList.css";
+import { useProduct } from "../../Context/productContext.jsx";
+import {WishListCard} from "./WishListCard.jsx";
 
 
 export function WishList() {

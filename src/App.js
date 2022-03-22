@@ -1,11 +1,11 @@
 import "./App.css";
-import {useEffect} from 'react';
-import {Navbar} from './components/Navbar/Navbar';
-import {Header} from './components/Header/Header';
+import {Navbar} from './components/Navbar/Navbar.jsx';
+import {Header} from './components/Header/Header.jsx';
 import { Route, Routes } from "react-router-dom";
-import Mockman from '../src/assets/Mockman'
-import {ProductList} from "../src/pages/ProductList/ProductList"
-import {Cart} from "../src/pages/CartPage/Cart"
+import Mockman from '../src/assets/Mockman.jsx'
+import {ProductList} from "../src/pages/ProductList/ProductList.jsx"
+import {Cart} from "../src/pages/CartPage/Cart.jsx";
+import {WishList} from "../src/pages/WishList/WishList.jsx";
 
 
 
@@ -24,6 +24,7 @@ function App() {
         <Route  exact path="/" element={<Header />} />
         <Route path="/product" element={<ProductList />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/wishlist" element={<WishList />} />
         <Route path="/mock-api" element={<Mockman />} />
         </Routes>
     </div>

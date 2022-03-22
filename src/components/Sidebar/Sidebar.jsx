@@ -1,11 +1,11 @@
-import "./Sidebar.css";
-import { useProduct } from "../../Context/productContext";
-import { BrandInput } from "../Sidebar/SidebarInput/BrandInput";
-import { DiscountInput } from "../Sidebar/SidebarInput/DiscountInput";
-import { PriceHighLowInput } from "../Sidebar/SidebarInput/PriceHighLowInput";
-import { PriceInput } from "../Sidebar/SidebarInput/PriceInput";
-import { RatingInput } from "../Sidebar/SidebarInput/RatingInput";
-import { CategoryInput } from "../Sidebar/SidebarInput/CategoryInput";
+import "./sidebar.css";
+import { useProduct } from "../../Context/productContext.jsx";
+import { BrandInput } from "../Sidebar/SidebarInput/BrandInput.jsx";
+import { DiscountInput } from "../Sidebar/SidebarInput/DiscountInput.jsx";
+import { PriceHighLowInput } from "../Sidebar/SidebarInput/PriceHighLowInput.jsx";
+import { PriceInput } from "../Sidebar/SidebarInput/PriceInput.jsx";
+import { RatingInput } from "../Sidebar/SidebarInput/RatingInput.jsx";
+import { CategoryInput } from "../Sidebar/SidebarInput/CategoryInput.jsx";
 
 export function Sidebar() {
   const { filterDispatch } = useProduct();

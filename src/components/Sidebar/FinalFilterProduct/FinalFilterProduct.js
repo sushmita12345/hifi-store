@@ -1,13 +1,13 @@
 import {useEffect, useState} from 'react';
-import "./FinalFilterProduct.css";
-import { ProductListCard } from "../../../components/ProductListCard/ProductListCard";
-import { FilterByBrand } from "../SidebarFilter/FilterByBrand";
-import { FilterByDiscount } from "../SidebarFilter/FilterByDiscount";
-import { FilterByPriceHighLow } from "../SidebarFilter/FilterByPriceHighLow";
-import { FilterByPrice } from "../SidebarFilter/FilterByPrice";
-import { FilterByRating } from "../SidebarFilter/FilterByRating";
-import { FilterByCategory } from "../SidebarFilter/FilterByCategory";
-import { useProduct } from "../../../Context/productContext";
+import "./finalFilterProduct.css";
+import { ProductListCard } from "../../../components/ProductListCard/ProductListCard.jsx";
+import { FilterByBrand } from "../SidebarFilter/FilterByBrand.jsx";
+import { FilterByDiscount } from "../SidebarFilter/FilterByDiscount.jsx";
+import { FilterByPriceHighLow } from "../SidebarFilter/FilterByPriceHighLow.jsx";
+import { FilterByPrice } from "../SidebarFilter/FilterByPrice.jsx";
+import { FilterByRating } from "../SidebarFilter/FilterByRating.jsx";
+import { FilterByCategory } from "../SidebarFilter/FilterByCategory.jsx";
+import { useProduct } from "../../../Context/productContext.jsx";
 import axios from 'axios';
 
 export function FinalFilterProduct() {

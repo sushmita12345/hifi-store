@@ -28,7 +28,7 @@ export function CartPrice() {
     return(
         <div class="cart-bill">
             <h3 class="price-detail">PRICE DETAILS</h3>
-            <hr />
+            <hr/>
             <div class="product-price">
                 <span class="product-count">Price ({cart.length})</span>
                 <div class="cart-price">

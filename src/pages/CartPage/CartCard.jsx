@@ -1,6 +1,9 @@
 import { MdiClose } from "../../assets/Icon/icon";
+import { useProduct } from "../../Context/productContext";
 
 export function CartCard({cartDetail}) {
+
+    const {filterDispatch} = useProduct();
 
     const {url, name, description, originalPrice, discountedPrice, discount} = cartDetail
     return (
@@ -47,7 +50,7 @@ export function CartCard({cartDetail}) {
             onClick={() =>
                 filterDispatch({
                 type: "REMOVE_FROM_CART",
-                payload: prod
+                payload: cartDetail
                 })
             }
             />

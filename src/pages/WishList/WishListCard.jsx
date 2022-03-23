@@ -1,7 +1,10 @@
 import { MdiClose, MdiStar } from "../../assets/Icon/icon";
 import "./wishList.css";
+import {useProduct} from "../../Context/productContext"
 
 export function WishListCard({wishlistDetail}) {
+
+    const {filterDispatch} = useProduct();
 
     const {url, rating, name, description, originalPrice, discountedPrice, discount} = wishlistDetail
 
@@ -18,7 +21,7 @@ export function WishListCard({wishlistDetail}) {
                 onClick={() =>
                     filterDispatch({
                     type: "REMOVE_FROM_WISHLIST",
-                    payload: prod
+                    payload: wishlistDetail
                     })
                 }
                 />

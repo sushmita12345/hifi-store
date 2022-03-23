@@ -104,7 +104,6 @@
   position: absolute;
   color: var(--white-shade);
   height: auto;
-  flex: 1;
   width: 40rem;
   bottom: 5rem;
   left: 38rem;
@@ -121,7 +120,7 @@
   font-size: 3rem;
   color: black;
   letter-spacing: 1px;
-  line-height: 1.5rem;
+  /* line-height: 1.5rem; */
 }
 
 .lower-section-1 {

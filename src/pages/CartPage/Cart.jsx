@@ -1,13 +1,13 @@
-import { useProduct } from "../../Context/productContext.jsx";
+import {useCart} from "../../Context/cartContext";
 import "./cart.css";
 import {CartCard} from "./CartCard.jsx"
 import { CartPrice } from "./CartPrice.jsx";
 
 export function Cart() {
     const {
-        filterState: { cart},
-        filterDispatch
-      } = useProduct();
+        cartState: { cart},
+        cartDispatch
+      } = useCart();
   
   return (
     <div>

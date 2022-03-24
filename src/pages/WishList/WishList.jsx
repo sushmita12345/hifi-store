@@ -1,13 +1,17 @@
 import "./wishList.css";
-import { useProduct } from "../../Context/productContext.jsx";
+import { useWishlist } from "../../Context/wishlistContext";
 import {WishListCard} from "./WishListCard.jsx";
 
 
 export function WishList() {
+  // const {
+  //   filterState: { wishlist },
+  //   filterDispatch
+  // } = useProduct();
+
   const {
-    filterState: { wishlist },
-    filterDispatch
-  } = useProduct();
+    wishlistState: {wishlist}, wishlistDispatch
+  } = useWishlist();
   return (
     <div>
       {wishlist.length > 0 ? (

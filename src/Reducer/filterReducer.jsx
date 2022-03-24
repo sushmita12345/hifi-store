@@ -3,7 +3,7 @@ export function filterReducer(state, action) {
     switch (action.type) {
       case "CLEAR_FILTER":
         return {
-          byStock: false,
+          searchQuery: "",
           originalPrice: "",
           discount: "",
           sortBy: "",
@@ -34,6 +34,8 @@ export function filterReducer(state, action) {
         return { ...state, sortBy: action.type };
       case "SORT_BY_DISCOUNT":
         return { ...state, discount: parseInt(action.value, 10) };
+      case "FILTER_BY_SEARCH":
+        return {...state, searchQuery: action.payload};
       case "ZIYAA":
         return {
           ...state,
@@ -104,28 +106,27 @@ export function filterReducer(state, action) {
           }
         };
   
-      case "ADD_TO_CART":
-        return { ...state, cart: [...state.cart, { ...action.payload, qty: 1 }] };
+      // case "ADD_TO_CART":
+      //   return { ...state, cart: [...state.cart, { ...action.payload, qty: 1 }] };
   
-      case "REMOVE_FROM_CART":
-        return {
-          ...state,
-          cart: [...state.cart.filter((item) => item.id !== action.payload.id)]
-        };
-  
-      case "ADD_TO_WISHLIST":
-        return {
-          ...state,
-          wishlist: [...state.wishlist, { ...action.payload, qty: 1 }]
-        };
-  
-      case "REMOVE_FROM_WISHLIST":
-        return {
-          ...state,
-          wishlist: [
-            ...state.wishlist.filter((item) => item.id !== action.payload.id)
-          ]
-        };
+      // case "REMOVE_FROM_CART":
+      //   return {
+      //     ...state,
+      //     cart: [...state.cart.filter((item) => item.id !== action.payload.id)]
+      //   };
+
+      //   case "MOVE_TO_CART":
+      //     return {
+      //       ...state, cart: [...state.cart, {...action.payload, qty: 1}]
+      //     }
+
+        // case "ADDED_TO_CART":
+        //   return {
+        //     ...state,
+        //     cart: [
+        //       ...state.cart.filter((item) => item.id !== action.payload.id)
+        //     ]
+        //   };
 
       
       default:

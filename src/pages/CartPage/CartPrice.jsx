@@ -1,12 +1,12 @@
 import {useState, useEffect} from 'react';
 import { MdiCurrencyInr } from "../../assets/Icon/icon";
-import { useProduct } from '../../Context/productContext.jsx';
+import { useCart } from '../../Context/cartContext';
 
 export function CartPrice() {
 
     const {
-        filterState: { cart},
-      } = useProduct();
+        cartState: { cart},
+      } = useCart();
     
       const [price, setPrice] = useState();
       const [discount, setDiscount] = useState();

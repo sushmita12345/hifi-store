@@ -9,6 +9,7 @@ import { FilterByRating } from "../SidebarFilter/FilterByRating.jsx";
 import { FilterByCategory } from "../SidebarFilter/FilterByCategory.jsx";
 import { useProduct } from "../../../Context/productContext.jsx";
 import axios from 'axios';
+import { FilterBySearch } from '../../Navbar/FilterBySearch';
 
 export function FinalFilterProduct() {
 
@@ -31,7 +32,9 @@ export function FinalFilterProduct() {
     fetchData();
   },[]);
 
-  const filterRating = FilterByRating(productsList, filterState.rating);
+  const filterSearch = FilterBySearch(productsList, filterState.searchQuery);
+
+  const filterRating = FilterByRating(filterSearch, filterState.rating);
 
   const filterPrice = FilterByPrice(filterRating, filterState.originalPrice);
 

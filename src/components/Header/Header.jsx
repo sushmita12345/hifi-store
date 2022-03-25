@@ -15,20 +15,20 @@ export function Header() {
     const {filterDispatch} = useProduct();
     return (
         <div className="container">
-           <div className="upper-section-1">
-                <Link to = "/product"> <img className="upper-image" src={saree} /></Link>
-                <div className="upper-btn">Saree</div>
+            <div className="upper-section-1">
+            <Link to = "/product"><img className="upper-image" src={saree} checked={!saree}/>
+                <div className="upper-btn">Saree</div></Link>
             </div>
             <div className="upper-section-2">
-                <img className="upper-image" src={kurta} />
+             <img className="upper-image" src={kurta} />
                 <div className="upper-btn">Ethnic</div>
             </div>
             <div className="upper-section-3">
-                <img className="upper-image" src={dress} />
+             <img className="upper-image" src={dress} />
                 <div className="upper-btn">Dress</div>
             </div>
             <div className="upper-section-4">
-                <img className="upper-image" src={sweatshirt} />
+             <img className="upper-image" src={sweatshirt} />
                 <div className="upper-btn">Sweatshirt</div>
             </div>
             

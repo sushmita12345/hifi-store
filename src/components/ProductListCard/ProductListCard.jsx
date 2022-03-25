@@ -1,10 +1,13 @@
 import { MdiStar, MdiCart } from "../../assets/Icon/icon";
-import { useProduct } from "../../Context/productContext.jsx";
+import { useWishlist } from "../../Context/wishlistContext";
+import {useCart} from "../../Context/cartContext";
+
 export function ProductListCard({ details }) {
-  const {
-    filterState: { cart, wishlist },
-    filterDispatch
-  } = useProduct();
+
+
+  const { cartState: {cart}, cartDispatch} = useCart();
+
+  const {wishlistState: {wishlist}, wishlistDispatch} = useWishlist();
   const {
     name,
     rating,
@@ -14,6 +17,7 @@ export function ProductListCard({ details }) {
     discountedPrice,
     discount
   } = details;
+
   
   return (
     <div className="product-card">
@@ -37,7 +41,7 @@ export function ProductListCard({ details }) {
             {cart.some((item) => item.id === details.id) ? (
               <button
                 onClick={() => {
-                  filterDispatch({
+                  cartDispatch({
                     type: "REMOVE_FROM_CART",
                     payload: details
                   });
@@ -49,7 +53,7 @@ export function ProductListCard({ details }) {
             ) : (
               <button
                 onClick={() => {
-                  filterDispatch({ type: "ADD_TO_CART", payload: details });
+                  cartDispatch({ type: "ADD_TO_CART", payload: details });
                 }}
                 className="product-cart-btn"
               >
@@ -61,7 +65,7 @@ export function ProductListCard({ details }) {
           {wishlist.some((item) => item.id === details.id) ? (
             <button
               onClick={() => {
-                filterDispatch({
+                wishlistDispatch({
                   type: "REMOVE_FROM_WISHLIST",
                   payload: details
                 });
@@ -74,7 +78,7 @@ export function ProductListCard({ details }) {
             <button
               className="product-wish-btn"
               onClick={() => {
-                filterDispatch({ type: "ADD_TO_WISHLIST", payload: details });
+                wishlistDispatch({ type: "ADD_TO_WISHLIST", payload: details });
               }}
             >
               Add to Wishlist

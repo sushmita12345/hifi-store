@@ -12,7 +12,7 @@ const ProductProvider = ({ children }) => {
     discount: "",
     sortBy: "",
     rating: "",
-
+    searchQuery: "",
     byBrand: {
       ziya: false,
       fabindia: false,
@@ -27,7 +27,6 @@ const ProductProvider = ({ children }) => {
       sweatshirt: false
     },
     cart: [],
-    wishlist: []
   });
   return (
     <ProductContext.Provider value={{ filterState, filterDispatch }}>

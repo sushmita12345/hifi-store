@@ -15,10 +15,6 @@ export function wishlistReducer(state, action) {
               ]
             };
 
-        // case "MOVE_TO_CART":
-        //     return {
-        //       ...state, cart: [...state.cart, {...action.payload, qty: 1}]
-        //     }
         default:
         return state;
     }

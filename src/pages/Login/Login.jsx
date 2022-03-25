@@ -1,7 +1,10 @@
+
 import {Link} from "react-router-dom";
 import "./login.css"
 
 export function Login() {
+
+    
     return (
         <div class="login-container">
         <div class="login-container-wrapper">
@@ -10,9 +13,9 @@ export function Login() {
             <form>
                 <div class="form-info">
                     <label class="login-text" htmlFor="email">Email address:</label>
-                    <input class="login-box" type="text" value="sush@neoG" />
+                    <input class="login-box" type="text" placeholder="Enter email"/>
                     <label class="login-text" for="password">Password:</label>
-                    <input class="login-box" type="password" value="sushmita" />
+                    <input class="login-box" type="password" placeholder="******" />
                 </div>
                 
                 <div class="pwd-remember">
@@ -23,7 +26,7 @@ export function Login() {
                     
                     <span class="login-forget">Forget your password?</span>
                 </div>
-                <button class="login-btn">Login</button>
+                <button class="login-btn" onClick={}>Login</button>
                 <Link to="/signup"><span class="login-account">Create New Account</span></Link>
                 
             </form> 

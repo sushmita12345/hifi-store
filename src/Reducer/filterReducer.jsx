@@ -105,7 +105,6 @@ export function filterReducer(state, action) {
             sweatshirt: !state.byCategory.sweatshirt
           }
         };
-  
       
       default:
         return state;

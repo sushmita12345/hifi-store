@@ -183,9 +183,22 @@
 
 .cart-option {
   display: flex;
-  justify-content: flex-start;
-  margin-top: 1.5rem;
-  width: 4rem;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.cart-increment {
+  margin-right: 8px;
+}
+
+.cart-increment,
+.cart-decrement {
+  margin-left: 8px;
+  font-size: 1.5rem;
+}
+
+.cart-count {
+  font-size: 1.2rem;
 }
 
 @media screen and (max-width: 1040px) {

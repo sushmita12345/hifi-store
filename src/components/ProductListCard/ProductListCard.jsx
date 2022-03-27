@@ -1,11 +1,16 @@
 import { MdiStar, MdiCart } from "../../assets/Icon/icon";
 import { useWishlist } from "../../Context/wishlistContext";
 import {useCart} from "../../Context/cartContext";
+import { useNavigate } from "react-router";
+import { useAuth } from "../../Context/authContext";
+import { cartReducer } from "../../Reducer/cartReducer";
+
 
 export function ProductListCard({ details }) {
+  const navigate = useNavigate();
+  const {token} = useAuth();
 
-
-  const { cartState: {cart}, cartDispatch} = useCart();
+  const { cartState: {cart}, addCart} = useCart();
 
   const {wishlistState: {wishlist}, wishlistDispatch} = useWishlist();
   const {
@@ -37,30 +42,31 @@ export function ProductListCard({ details }) {
           <span className="product-discount">{discount}% OFF</span>
         </div>
         <div className="product-btn">
-          <div className="product-cart-btn-container">
-            {cart.some((item) => item.id === details.id) ? (
-              <button
-                onClick={() => {
-                  cartDispatch({
-                    type: "REMOVE_FROM_CART",
-                    payload: details
-                  });
-                }}
-                className="product-cart-btn"
-              >
-                Remove to cart
-              </button>
-            ) : (
-              <button
-                onClick={() => {
-                  cartDispatch({ type: "ADD_TO_CART", payload: details });
-                }}
-                className="product-cart-btn"
-              >
-                <MdiCart />
-                Add to Cart
-              </button>
-            )}
+
+        <div className="product-cart-btn-container">
+          {cart.some((item) => item._id === details._id) ? (
+            <button
+              onClick={() => {navigate("/cart")}}
+              className="product-cart-btn"
+            >
+            <MdiCart />
+            Move to Cart
+              
+            </button>
+          ): (
+
+            <button
+              onClick={() => {token ? addCart(details) : navigate("/Login")}}
+              className="product-cart-btn"
+            >
+            <MdiCart />
+            Add to Cart
+              
+            </button>
+            
+          )} 
+           
+            
           </div>
           {wishlist.some((item) => item.id === details.id) ? (
             <button

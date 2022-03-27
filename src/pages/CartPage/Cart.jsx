@@ -5,8 +5,7 @@ import { CartPrice } from "./CartPrice.jsx";
 
 export function Cart() {
     const {
-        cartState: { cart},
-        cartDispatch
+        cartState: { cart },
       } = useCart();
   
   return (
@@ -16,8 +15,8 @@ export function Cart() {
           <div class="my-cart-text">MY CART({cart.length})</div>
           <div className="product-bill">
             <div className="all-cart-product">
-              {cart.map((prod) => {
-                  return <CartCard key={prod.id} cartDetail={prod}/>
+              {cart?.map((prod) => {
+                  return <CartCard key={prod._id} cartDetail={prod}/>
               })}
             </div>
             <div class="cart-wrapper">

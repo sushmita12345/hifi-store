@@ -1,9 +1,11 @@
 import { MdiClose } from "../../assets/Icon/icon";
 import { useCart } from "../../Context/cartContext";
+import {MdiPlus, MdiMinus, IcRoundFavoriteBorder} from "../../assets/Icon/icon"
+
 
 export function CartCard({cartDetail}) {
 
-    const {cartDispatch} = useCart();
+    const {incrementQty, decrementQty, removeCartItem} = useCart();
 
     const {url, name, description, originalPrice, discountedPrice, discount} = cartDetail
     return (
@@ -18,42 +20,37 @@ export function CartCard({cartDetail}) {
             </div>
             <div class="product-card-cont-b horizontal-card-b">
                 <div class="product-horizontal-container">
-                <h3 class="product-name">{name}</h3>
-                <p class="product-type">{description}</p>
-                <div class="product-price-container">
-                    <span class="product-price">
-                    Rs. {originalPrice}
-                    </span>
-                    <span class="product-original-price">
-                    Rs. {discountedPrice}
-                    </span>
-                    <span class="product-discount">
-                    ({discount}% OFF)
-                    </span>
-                </div>
-
-                <select className="cart-option">
-                    <span>Qty:</span>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-
-                
+                    <h3 class="product-name">{name}</h3>
+                    <p class="product-type">{description}</p>
+                    <div class="product-price-container">
+                        <span class="product-price">
+                        Rs. {originalPrice}
+                        </span>
+                        <span class="product-original-price">
+                        Rs. {discountedPrice}
+                        </span>
+                        <span class="product-discount">
+                        ({discount}% OFF)
+                        </span>
+                    </div>
+                    <div className="cart-option">
+                        <MdiPlus class="cart-increment" onClick={() => incrementQty(cartDetail, "increment")}/>
+                        <span className="cart-count">{cartDetail.qty}</span>
+                        <MdiMinus class="cart-decrement" onClick={() => {cartDetail.qty <= 1 ? removeCartItem(cartDetail) : decrementQty(cartDetail, "decrement")}}/>
+                        
+                    </div>
+               
                 </div>
             </div>
             </div>
             <MdiClose
             className="product-remove"
             onClick={() =>
-                cartDispatch({
-                type: "REMOVE_FROM_CART",
-                payload: cartDetail
-                })
+                removeCartItem(cartDetail)
+                
             }
             />
+            {/* <IcRoundFavoriteBorder /> */}
         </div>
     )
 }

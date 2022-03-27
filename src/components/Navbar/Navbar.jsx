@@ -2,15 +2,19 @@ import './navbar.css';
 import React from "react";
 import {IcRoundFavoriteBorder, IcOutlineShoppingCart, MdiMagnify} from '../../assets/Icon/icon';
 import logo from '../../assets/Image/Logo/HIFI.png';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import { useProduct } from '../../Context/productContext';
 import { useWishlist } from '../../Context/wishlistContext';
 import {useCart} from "../../Context/cartContext";
+import {useAuth} from "../../Context/authContext";
 
 export function Navbar() {
+  const navigate = useNavigate();
   const {
      filterDispatch
   } = useProduct();
+
+  const {token, logoutFun} = useAuth();
 
   const {wishlistState: {wishlist}, wishlistDispatch} = useWishlist();
 
@@ -24,7 +28,7 @@ export function Navbar() {
         <MdiMagnify className="nav-search-icon"/>
       </div>
       <div className="btn-left">
-        <Link to="/login"><button class="nav-btn">Login</button></Link>
+        <Link to="/login"><button class="nav-btn" onClick={() => {logoutFun(), navigate("/")}}>{token ? "Logout" : "Login"}</button></Link>
         <Link to="/wishlist"><IcRoundFavoriteBorder className="nav-heart-icon" />
           {wishlist.length > 0 ? (
             <div className="wishlist-count-container">
@@ -33,14 +37,19 @@ export function Navbar() {
           ) : (
             ""
           )}</Link>
-        <Link to="/cart"><IcOutlineShoppingCart className="nav-cart-icon" />
+        <IcOutlineShoppingCart className="nav-cart-icon" onClick={() => {token ? navigate("/cart") : navigate("/Login")}}/>
           {cart.length > 0 ? (
             <div className="cart-count-container">
-              <span className="nav-cart-count">{cart.length}</span>
+            {
+              token && (
+                <span className="nav-cart-count">{cart?.length}</span>
+              )
+            }
+             
             </div>
           ) : (
             ""
-          )}</Link>
+          )}
         {/* <IcRoundLogout className="nav-logout-icon"/> */}
       </div>
     </nav>

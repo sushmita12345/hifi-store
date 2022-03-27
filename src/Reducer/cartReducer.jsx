@@ -1,22 +1,22 @@
 export function cartReducer(state, action) {
-    switch(action.type) {
 
+    switch(action.type){
+        case "GET_CARTITEM_FROM_LOCAL_STORAGE":
+            return {...state, cart: action.payload}
+            
         case "ADD_TO_CART":
-            return { ...state, cart: [...state.cart, { ...action.payload, qty: 1 }] 
-        };
-      
-        case "REMOVE_FROM_CART":
-        return {
-            ...state,
-            cart: [...state.cart.filter((item) => item.id !== action.payload.id)]
-        };
+            return {...state, cart: action.payload}
 
-        case "MOVE_TO_CART":
-            return {
-            ...state, cart: [...state.cart, {...action.payload, qty: 1}]
-        }
-    
+        case "REMOVE_CART_CARD":
+            return {...state, cart: action.payload}
+
+        case "INCREMENT_CART_QUANTITY":
+            return {...state, cart: action.payload}
+
+        case "DECREMENT_CART_QUANTITY":
+            return {...state, cart: action.payload}
+
         default:
-        return state;
+            return state
     }
 }

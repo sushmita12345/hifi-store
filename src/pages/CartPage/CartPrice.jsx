@@ -10,18 +10,20 @@ export function CartPrice() {
     
       const [price, setPrice] = useState();
       const [discount, setDiscount] = useState();
-    
-    //   Ignore the functionality for now
+      const [prodCount, setProdCount] = useState();
     
       useEffect(() => {
-        setPrice(cart.reduce((acc, curr) => acc + Number(curr.originalPrice), 0));
+        setPrice(cart.reduce((acc, curr) => acc + Number(curr.originalPrice)*curr.qty, 0));
       }, [cart]);
     
       useEffect(() => {
         setDiscount(
-          cart.reduce((acc, curr) => acc + Number(curr.discountedPrice), 0)
+          cart.reduce((acc, curr) => acc + Number(curr.discountedPrice)*curr.qty, 0)
         );
       }, [cart]);
+      useEffect(() => {
+        setProdCount(cart.reduce((acc, curr) => acc + Number(curr.qty), 0))
+      })
     
       const total = discount - price;
     
@@ -30,7 +32,7 @@ export function CartPrice() {
             <h3 class="price-detail">PRICE DETAILS</h3>
             <hr/>
             <div class="product-price">
-                <span class="product-count">Price ({cart.length})</span>
+                <span class="product-count">Price ({prodCount})</span>
                 <div class="cart-price">
                 <MdiCurrencyInr className="bill-rupee-icon" />
                 <span class="product-rupee">{discount}</span>

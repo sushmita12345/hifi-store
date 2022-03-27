@@ -15,11 +15,7 @@ export function Login() {
         e.preventDefault();
         try {
             const {status, data: {foundUser, encodedToken}} = await axios.post(`/api/auth/login`, loginForm
-            // JSON.stringify({
-            // email: "adarshbalika@gmail.com",
-            // password: "adarshBalika123",
-            // }
-            // )
+
             );
             // saving the encodedToken in the localStorage
 

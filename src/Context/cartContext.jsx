@@ -28,7 +28,7 @@ const CartProvider = ({children}) => {
                         }                   
                     })
                     console.log(cart)
-                    cartDispatch({type: "GET_CARTITEM_FROM_LOCAL_STORAGE", payload: cart})
+                    cartDispatch({type: "GET_CARTITEM_FROM_BACKEND_DATA", payload: cart})
                 }catch(error){
                 console.log(error);
                 }

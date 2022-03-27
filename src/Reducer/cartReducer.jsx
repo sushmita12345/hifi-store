@@ -1,7 +1,7 @@
 export function cartReducer(state, action) {
 
     switch(action.type){
-        case "GET_CARTITEM_FROM_LOCAL_STORAGE":
+        case "GET_CARTITEM_FROM_BACKEND_DATA":
             return {...state, cart: action.payload}
             
         case "ADD_TO_CART":

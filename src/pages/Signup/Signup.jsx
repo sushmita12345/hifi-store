@@ -10,12 +10,6 @@ export function Signup() {
         e.preventDefault();
         try {
             const {status, data: {encodedToken}} = await axios.post(`/api/auth/signup`, signupForm
-            // JSON.stringify({
-            // firstName: "Sushmita1",
-            // lastName: "Gupta1",
-            // email: "sush1@gmail.com",
-            // password: "sushmita1234",
-            // })
             );
             // saving the encodedToken in the localStorage
             

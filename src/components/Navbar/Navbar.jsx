@@ -28,17 +28,22 @@ export function Navbar() {
         <MdiMagnify className="nav-search-icon"/>
       </div>
       <div className="btn-left">
-        <Link to="/login"><button class="nav-btn" onClick={() => {logoutFun(), navigate("/")}}>{token ? "Logout" : "Login"}</button></Link>
-        <Link to="/wishlist"><IcRoundFavoriteBorder className="nav-heart-icon" />
-          {wishlist.length > 0 ? (
+        <button class="nav-btn" onClick={() => {logoutFun(), navigate("/")}}>{token ? "Logout" : "Login"}</button>
+        <IcRoundFavoriteBorder className="nav-heart-icon" onClick={() => {token ? navigate("/wishlist") : navigate("/Login")}}/>
+          {wishlist?.length > 0 ? (
             <div className="wishlist-count-container">
-              <span className="nav-wishlist-count">{wishlist.length}</span>
+            {
+              token && (
+                <span className="nav-wishlist-count">{wishlist?.length}</span>
+              )
+            }
+              
             </div>
           ) : (
             ""
-          )}</Link>
+          )}
         <IcOutlineShoppingCart className="nav-cart-icon" onClick={() => {token ? navigate("/cart") : navigate("/Login")}}/>
-          {cart.length > 0 ? (
+          {cart?.length > 0 ? (
             <div className="cart-count-container">
             {
               token && (
@@ -50,7 +55,6 @@ export function Navbar() {
           ) : (
             ""
           )}
-        {/* <IcRoundLogout className="nav-logout-icon"/> */}
       </div>
     </nav>
     

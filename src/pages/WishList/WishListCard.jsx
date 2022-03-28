@@ -1,13 +1,13 @@
 import { MdiClose, MdiStar } from "../../assets/Icon/icon";
 import { useWishlist } from "../../Context/wishlistContext";
 import "./wishList.css";
-import {useProduct} from "../../Context/productContext"
 import {useCart} from "../../Context/cartContext";
+
 
 export function WishListCard({wishlistDetail}) {
 
-    const {cartState: {cart}, cartDispatch} = useCart();
-    const {wishlistState: {wishlist}, wishlistDispatch} = useWishlist();
+    const {addCart} = useCart();
+    const { removeWishlist} = useWishlist();
 
     const {url, rating, name, description, originalPrice, discountedPrice, discount} = wishlistDetail
 
@@ -22,10 +22,7 @@ export function WishListCard({wishlistDetail}) {
                 <MdiClose
                 className="wishlist-close"
                 onClick={() =>
-                    wishlistDispatch({
-                    type: "REMOVE_FROM_WISHLIST",
-                    payload: wishlistDetail
-                    })
+                    removeWishlist(wishlistDetail)
                 }
                 />
             </div>
@@ -45,30 +42,7 @@ export function WishListCard({wishlistDetail}) {
                 </div>
                 <div className="product-btn">
                 <div className="product-cart-btn-container">
-                    {cart.some((item) => item.id === wishlistDetail.id) ? (
-                        <button
-                            onClick={() => {
-                            wishlistDispatch({
-                                type: "REMOVE_FROM_WISHLIST",
-                                payload: wishlistDetail
-                            });
-                            }}
-                            className="product-cart-btn"
-                        >
-                            Added to cart
-                        </button>
-                        ) : ( <button
-                            onClick={() => {
-                            cartDispatch({
-                                type: "MOVE_TO_CART",
-                                payload: wishlistDetail
-                            });
-                            }}
-                            className="product-cart-btn"
-                        >
-                            Move to cart
-                        </button>)}
-                    {/* <button className="product-cart-btn">Move to Cart</button> */}
+                    <button className="product-cart-btn" onClick={()=>{addCart(wishlistDetail), removeWishlist(wishlistDetail)}}>Move to Cart</button>
                 </div>
                 </div>
             </div>

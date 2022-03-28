@@ -3,7 +3,8 @@ import { useWishlist } from "../../Context/wishlistContext";
 import {useCart} from "../../Context/cartContext";
 import { useNavigate } from "react-router";
 import { useAuth } from "../../Context/authContext";
-import { cartReducer } from "../../Reducer/cartReducer";
+
+
 
 
 export function ProductListCard({ details }) {
@@ -12,7 +13,7 @@ export function ProductListCard({ details }) {
 
   const { cartState: {cart}, addCart} = useCart();
 
-  const {wishlistState: {wishlist}, wishlistDispatch} = useWishlist();
+  const {wishlistState: {wishlist}, addWishlist, removeWishlist} = useWishlist();
   const {
     name,
     rating,
@@ -43,53 +44,49 @@ export function ProductListCard({ details }) {
         </div>
         <div className="product-btn">
 
-        <div className="product-cart-btn-container">
-          {cart.some((item) => item._id === details._id) ? (
-            <button
-              onClick={() => {navigate("/cart")}}
-              className="product-cart-btn"
-            >
-            <MdiCart />
-            Move to Cart
-              
-            </button>
-          ): (
+          <div className="product-cart-btn-container">
+            {cart.some((item) => item._id === details._id) ? (
+              <button
+                onClick={() => {navigate("/cart")}}
+                className="product-cart-btn"
+              >
+              <MdiCart />
+              Move to Cart
+                
+              </button>
+            ): (
 
-            <button
-              onClick={() => {token ? addCart(details) : navigate("/Login")}}
-              className="product-cart-btn"
-            >
-            <MdiCart />
-            Add to Cart
+              <button
+                onClick={() => {token ? addCart(details) : navigate("/Login")}}
+                className="product-cart-btn"
+              >
+              <MdiCart />
+              Add to Cart
+                
+              </button>
               
-            </button>
-            
-          )} 
-           
-            
-          </div>
-          {wishlist.some((item) => item.id === details.id) ? (
+            )} 
+            {wishlist.find((item) => item._id === details._id) ? (
             <button
               onClick={() => {
-                wishlistDispatch({
-                  type: "REMOVE_FROM_WISHLIST",
-                  payload: details
-                });
+                removeWishlist(details)
               }}
               className="product-wish-btn"
             >
-              Wishlisted
+              Remove from wishlist
             </button>
           ) : (
             <button
               className="product-wish-btn"
               onClick={() => {
-                wishlistDispatch({ type: "ADD_TO_WISHLIST", payload: details });
+                {token ? addWishlist(details) : navigate("/Login")}
               }}
             >
               Add to Wishlist
             </button>
           )}
+            
+          </div>
         </div>
       </div>
     </div>

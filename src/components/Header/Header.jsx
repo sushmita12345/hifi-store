@@ -1,5 +1,5 @@
 import React from 'react';
-import './header.css';
+import './Header.css';
 import saree from '../../assets/Image/Header/main-saree.webp';
 import sweatshirt from '../../assets/Image/Header/main-sweatshirt.webp';
 import kurta from '../../assets/Image/Header/main-kurta.jpeg';

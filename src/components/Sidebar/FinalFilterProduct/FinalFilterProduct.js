@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import "./finalFilterProduct.css";
+import "./FinalFilterProduct.css";
 import { ProductListCard } from "../../../components/ProductListCard/ProductListCard.jsx";
 import { FilterByBrand } from "../SidebarFilter/FilterByBrand.jsx";
 import { FilterByDiscount } from "../SidebarFilter/FilterByDiscount.jsx";

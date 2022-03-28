@@ -1,5 +1,5 @@
 import {useEffect} from "react";
-import "./productList.css";
+import "./ProductList.css";
 import "../../assets/css/reset.css"
 import { Sidebar } from "../../components/Sidebar/Sidebar.jsx";
 import { FinalFilterProduct } from "../../components/Sidebar/FinalFilterProduct/FinalFilterProduct";

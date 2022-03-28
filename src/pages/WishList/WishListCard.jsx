@@ -1,6 +1,7 @@
 import { MdiClose, MdiStar } from "../../assets/Icon/icon";
 import { useWishlist } from "../../Context/wishlistContext";
-import "./wishList.css";
+import "./WishList.css";
+import {useProduct} from "../../Context/productContext"
 import {useCart} from "../../Context/cartContext";
 
 

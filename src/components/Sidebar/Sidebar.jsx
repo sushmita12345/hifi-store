@@ -1,4 +1,4 @@
-import "./sidebar.css";
+import "./Sidebar.css";
 import { useProduct } from "../../Context/productContext.jsx";
 import { BrandInput } from "../Sidebar/SidebarInput/BrandInput.jsx";
 import { DiscountInput } from "../Sidebar/SidebarInput/DiscountInput.jsx";

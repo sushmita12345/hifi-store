@@ -1,4 +1,4 @@
-import './navbar.css';
+import './Navbar.css';
 import React from "react";
 import {IcRoundFavoriteBorder, IcOutlineShoppingCart, MdiMagnify} from '../../assets/Icon/icon';
 import logo from '../../assets/Image/Logo/HIFI.png';

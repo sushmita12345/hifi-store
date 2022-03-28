@@ -1,4 +1,4 @@
-import "./wishList.css";
+import "./WishList.css";
 import { useWishlist } from "../../Context/wishlistContext";
 import {WishListCard} from "./WishListCard.jsx";
 

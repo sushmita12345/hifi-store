@@ -1,5 +1,5 @@
 import {useCart} from "../../Context/cartContext";
-import "./cart.css";
+import "./Cart.css";
 import {CartCard} from "./CartCard.jsx"
 import { CartPrice } from "./CartPrice.jsx";
 

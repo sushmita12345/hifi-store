@@ -1,3 +1,5 @@
+@import url("/src/assets/css/reset.css");
+
 .productlist-container {
   display: flex;
   flex-direction: column;
@@ -64,7 +66,7 @@
   width: 4rem;
   flex: 1;
   height: 2rem;
-  background-color: white;
+  background-color: var(--white);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -176,6 +178,7 @@
   font-size: 1.2rem;
   width: 12rem;
   height: 3rem;
+  margin-bottom: 5px;
 }
 
 .product-cart-icon {
@@ -193,15 +196,15 @@
 
 .product-cart-btn {
   width: 100%;
-  background-color: palevioletred;
-  color: white;
+  background-color: var(--secondary-color);
+  color: var(--white);
 }
 
 .product-wish-btn {
   width: 100%;
-  background-color: white;
-  color: palevioletred;
-  border: 1px solid palevioletred;
+  background-color: var(--white);
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
 }
 
 .product-new {
@@ -209,7 +212,7 @@
   left: 1rem;
   top: 1rem;
   background-color: orangered;
-  color: white;
+  color: var(--white);
   width: 4rem;
   height: 2rem;
   display: flex;

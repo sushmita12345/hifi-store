@@ -4,22 +4,18 @@ import {WishListCard} from "./WishListCard.jsx";
 
 
 export function WishList() {
-  // const {
-  //   filterState: { wishlist },
-  //   filterDispatch
-  // } = useProduct();
-
   const {
-    wishlistState: {wishlist}, wishlistDispatch
+    wishlistState: { wishlist },
   } = useWishlist();
+
   return (
     <div>
-      {wishlist.length > 0 ? (
+      {wishlist?.length > 0 ? (
         <div>
           <h1 className="wishlist-heading">My wishlist ({wishlist.length})</h1>
           <div className="wishlist-wrapper">
-            {wishlist.map((prod) => {
-                return <WishListCard key={prod.id} wishlistDetail={prod} />
+            {wishlist?.map((wishProd) => {
+                return <WishListCard key={wishProd._id} wishlistDetail={wishProd} />
             }
               
             )}

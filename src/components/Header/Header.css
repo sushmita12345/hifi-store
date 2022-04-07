@@ -171,8 +171,6 @@
   }
 
   .upper-btn {
-    /* max-width: 13rem;
-    height: 2.5rem; */
     position: absolute;
     top: 6.5rem;
     left: 0px;
@@ -205,13 +203,10 @@
   }
 
   .upper-btn {
-    /* max-width: 13rem;
-    height: 2.5rem; */
     position: absolute;
     top: 6.5rem;
     left: 0px;
     border: none;
-    background-color: white;
   }
 
   .lower-card-img {
@@ -356,13 +351,10 @@
   }
 
   .upper-btn {
-    width: 3rem;
-    height: 2rem;
     position: absolute;
     top: 3rem;
     left: 0px;
     border: none;
-    background-color: white;
   }
 
   .lower-content-1 {

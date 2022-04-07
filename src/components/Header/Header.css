@@ -154,9 +154,9 @@
     grid-gap: 3rem;
     padding-top: 4rem;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 18rem 65rem 25rem 25rem;
+    grid-template-rows: 65rem 25rem 25rem;
     grid-template-areas:
-      ". u1 u1 u2 u2 u3 u3 u4 u4 u5 u5 ."
+      /* ". u1 u1 u2 u2 u3 u3 u4 u4 u5 u5 ." */
       ". m m m m m m m m m m ."
       ". l1 l1 l1 l1 l1 l2 l2 l2 l2 l2 .";
   }
@@ -190,9 +190,9 @@
     grid-gap: 3rem;
     padding-top: 4rem;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 18rem 65rem 25rem 25rem;
+    grid-template-rows: 65rem 25rem 25rem;
     grid-template-areas:
-      ". u1 u1 u2 u2 u3 u3 u4 u4 u5 u5 ."
+      /* ". u1 u1 u2 u2 u3 u3 u4 u4 u5 u5 ." */
       ". m m m m m m m m m m ."
       ". l1 l1 l1 l1 l1 l1 l1 l1 l1 l1 ."
       ". l2 l2 l2 l2 l2 l2 l2 l2 l2 l2 .";
@@ -256,9 +256,9 @@
     grid-gap: 3rem;
     padding-top: 4rem;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 12rem 65rem 25rem 25rem;
+    grid-template-rows: 65rem 25rem 25rem;
     grid-template-areas:
-      ". u1 u1 u2 u2 u3 u3 u4 u4 u5 u5 ."
+      /* ". u1 u1 u2 u2 u3 u3 u4 u4 u5 u5 ." */
       ". m m m m m m m m m m ."
       ". l1 l1 l1 l1 l1 l1 l1 l1 l1 l1 ."
       ". l2 l2 l2 l2 l2 l2 l2 l2 l2 l2 .";
@@ -318,9 +318,9 @@
     grid-gap: 3rem;
     padding-top: 4rem;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 10rem 65rem 25rem 25rem;
+    grid-template-rows: 65rem 25rem 25rem;
     grid-template-areas:
-      "u1 u1 u1 u2 u2 u2 u3 u3 u3 u4 u4 u4"
+      /* "u1 u1 u1 u2 u2 u2 u3 u3 u3 u4 u4 u4" */
       ". m m m m m m m m m m ."
       ". l1 l1 l1 l1 l1 l1 l1 l1 l1 l1 ."
       ". l2 l2 l2 l2 l2 l2 l2 l2 l2 l2 .";

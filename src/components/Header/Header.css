@@ -6,39 +6,31 @@
   grid-gap: 4rem;
   padding-top: 4rem;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 35rem 65rem 25rem;
+  grid-template-rows: 65rem 25rem;
   margin-left: 3rem;
   margin-right: 3rem;
   grid-template-areas:
-    "u1 u1 u1 u2 u2 u2 u3 u3 u3 u4 u4 u4"
     ". m m m m m m m m m m ."
     ". l1 l1 l1 l1 l1 l2 l2 l2 l2 l2 .";
+}
+
+.cat-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 
 .upper-section-1,
 .upper-section-2,
 .upper-section-3,
 .upper-section-4 {
-  margin-top: 2rem;
+  height: 30vh;
+  width: 20vw;
+  margin-top: 5rem;
   position: relative;
   font-size: 2.5rem;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-
-.upper-section-1 {
-  grid-area: u1;
-}
-
-.upper-section-2 {
-  grid-area: u2;
-}
-
-.upper-section-3 {
-  grid-area: u3;
-}
-
-.upper-section-4 {
-  grid-area: u4;
 }
 
 .upper-section-1:hover {
@@ -70,16 +62,20 @@
   height: 100%;
   width: 100%;
   display: block;
+  object-fit: contain;
+  cursor: pointer;
 }
 
 .upper-btn {
-  width: 100%;
+  width: 80%;
   height: 100%;
   position: absolute;
-  top: 15rem;
+  top: 10rem;
+  right: 2rem;
   text-align: center;
   border: none;
   color: var(--white-shade);
+  cursor: pointer;
 }
 
 .mid-main {
@@ -120,7 +116,6 @@
   font-size: 3rem;
   color: black;
   letter-spacing: 1px;
-  /* line-height: 1.5rem; */
 }
 
 .lower-section-1 {
@@ -176,13 +171,13 @@
   }
 
   .upper-btn {
-    max-width: 13rem;
-    height: 2.5rem;
+    /* max-width: 13rem;
+    height: 2.5rem; */
     position: absolute;
     top: 6.5rem;
     left: 0px;
     border: none;
-    background-color: white;
+    cursor: pointer;
   }
 
   .lower-card-img {
@@ -210,8 +205,8 @@
   }
 
   .upper-btn {
-    max-width: 13rem;
-    height: 2.5rem;
+    /* max-width: 13rem;
+    height: 2.5rem; */
     position: absolute;
     top: 6.5rem;
     left: 0px;

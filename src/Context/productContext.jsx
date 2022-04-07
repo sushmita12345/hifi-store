@@ -26,7 +26,7 @@ const ProductProvider = ({ children }) => {
       dress: false,
       sweatshirt: false
     },
-    cart: [],
+    // cart: [],
   });
   return (
     <ProductContext.Provider value={{ filterState, filterDispatch }}>

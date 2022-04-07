@@ -21,8 +21,8 @@ export function filterReducer(state, action) {
             dress: false,
             sweatshirt: false
           },
-          cart: [],
-          cartCount: ""
+          // cart: [],
+          // cartCount: ""
         };
       case "SORT_BY_RATING":
         return { ...state, rating: parseInt(action.value, 10) };

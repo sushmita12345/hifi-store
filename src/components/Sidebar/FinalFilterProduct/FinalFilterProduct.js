@@ -14,9 +14,7 @@ import { FilterBySearch } from '../../Navbar/FilterBySearch';
 export function FinalFilterProduct() {
 
   const { filterState } = useProduct();
-        const [productsList, setProductsList] = useState();
-
-  console.log(productsList);
+        const [productsList, setProductsList] = useState([]);
 
   useEffect(() => {
     

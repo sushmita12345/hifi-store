@@ -7,7 +7,8 @@ import {ProductList} from "../src/pages/ProductList/ProductList.jsx"
 import {Cart} from "../src/pages/CartPage/Cart.jsx";
 import {WishList} from "../src/pages/WishList/WishList.jsx";
 import {Login} from "../src/pages/Login/Login";
-import {Signup} from "../src/pages/Signup/Signup"
+import {Signup} from "../src/pages/Signup/Signup";
+
 
 
 function App() {

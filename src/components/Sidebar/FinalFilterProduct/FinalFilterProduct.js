@@ -57,8 +57,6 @@ export function FinalFilterProduct() {
     filterState.byCategory.sweatshirt
   );
   
-console.log(filterCategory)
-  
   return (
     <div className="container-wrapper">
       <div className="result-wrapper">

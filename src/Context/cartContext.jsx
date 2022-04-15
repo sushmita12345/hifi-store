@@ -41,15 +41,16 @@ const CartProvider = ({children}) => {
             return 
         }else {
             (async() => {
+                
                 try {
-                    const {status, data: {cart}} = await axios.post("api/user/cart", {product}, {
+                    const {status, data: {cart}} = await axios.post("/api/user/cart", {product}, {
                         headers: {
                             authorization: token,
                         }
                     })
 
                     // status = 201 ? alert("Added to cart") : null
-                    cartDispatch({type: "ADD_TO_CART", payload: cart, productId: product._id},)
+                    cartDispatch({type: "ADD_TO_CART", payload: cart, productId: product._id})
                     
                 } catch(error){
                     console.log(error)

@@ -78,9 +78,11 @@ export const loginHandler = function (schema, request) {
     }
     console.log(foundUser)
     if (bcrypt.compareSync(password, foundUser.password)) {
+      console.log("Test error")
       const encodedToken = jwt.sign(
         { _id: foundUser._id, email },
-        process.env.REACT_APP_JWT_SECRET
+        // process.env.REACT_APP_JWT_SECRET
+        "test123"
       );
       console.log(encodedToken)
       foundUser.password = undefined;

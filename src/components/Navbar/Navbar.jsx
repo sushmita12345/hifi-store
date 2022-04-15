@@ -28,7 +28,7 @@ export function Navbar() {
         <MdiMagnify className="nav-search-icon"/>
       </div>
       <div className="btn-left">
-        <button class="nav-btn" onClick={() => {logoutFun(), navigate("/")}}>{token ? "Logout" : "Login"}</button>
+        <button class="nav-btn" onClick={() => {logoutFun(), navigate("/login")}}>{token ? "Logout" : "Login"}</button>
         <IcRoundFavoriteBorder className="nav-heart-icon" onClick={() => {token ? navigate("/wishlist") : navigate("/Login")}}/>
           {wishlist?.length > 0 ? (
             <div className="wishlist-count-container">

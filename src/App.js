@@ -1,41 +1,31 @@
 import "./App.css";
-import logo from "./logo.png";
+import {Navbar} from './components/Navbar/Navbar.jsx';
+import {Header} from './components/Header/Header.jsx';
+import { Route, Routes } from "react-router-dom";
+import Mockman from '../src/assets/Mockman.jsx'
+import {ProductList} from "../src/pages/ProductList/ProductList.jsx"
+import {Cart} from "../src/pages/CartPage/Cart.jsx";
+import {WishList} from "../src/pages/WishList/WishList.jsx";
+import {Login} from "../src/pages/Login/Login";
+import {Signup} from "../src/pages/Signup/Signup";
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} alt="mockBee logo" width="180" height="180" />
-        <h1 className="brand-title">
-          Welcome to <span>mockBee!</span>
-        </h1>
-        <p className="brand-description">
-          Get started by editing <code>src/App.js</code>
-        </p>
-        <div className="links">
-          <a
-            href="https://mockbee.netlify.app/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Explore mockBee
-          </a>
-          <a
-            href="https://mockbee.netlify.app/docs/api/introduction"
-            target="_blank"
-            rel="noreferrer"
-          >
-            API Documentation
-          </a>
-          <a
-            href="https://github.com/neogcamp/mockBee"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Contribute
-          </a>
-        </div>
-      </header>
+  
+      <Navbar />
+
+      <Routes>
+        <Route  exact path="/" element={<Header />} />
+        <Route path="/product" element={<ProductList />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/wishlist" element={<WishList />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/mock-api" element={<Mockman />} />
+        </Routes>
     </div>
   );
 }

@@ -1,0 +1,30 @@
+.wishlist-wrapper {
+  display: flex;
+  gap: 3rem;
+  padding: 6rem;
+}
+
+.wishlist-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+}
+
+.product-card-cont-a {
+  position: relative;
+}
+
+.wishlist-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.wishlist-empty {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

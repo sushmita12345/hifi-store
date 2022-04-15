@@ -1,0 +1,74 @@
+@import url("../../assets/css/reset.css");
+
+.home-navbar {
+  background-color: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.search-bar {
+  background-color: var(--white);
+  border-radius: 5px;
+  padding-left: 5rem;
+  font-size: 1.6rem;
+}
+
+.nav-heart-icon,
+.nav-cart-icon,
+.nav-logout-icon {
+  font-size: 3rem;
+  margin-right: 1.5rem;
+  padding: 0rem;
+}
+
+.nav-search-container {
+  position: relative;
+}
+
+.nav-search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 1.2rem;
+  font-size: 2rem;
+}
+
+.nav-btn {
+  border-radius: 5px;
+  color: var(--white-shade);
+  margin-right: 1.5rem;
+}
+
+.btn-left {
+  position: relative;
+}
+
+.cart-count-container {
+  left: 18rem;
+}
+
+.wishlist-count-container {
+  left: 13.5rem;
+}
+
+.cart-count-container,
+.wishlist-count-container {
+  position: absolute;
+  background-color: brown;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  color: white;
+
+  bottom: 2.5rem;
+  font-size: 1rem;
+}
+
+.nav-wishlist-count,
+.nav-cart-count {
+  position: absolute;
+  margin-left: 8px;
+  margin-top: 2px;
+}
+
+.nav-logout-icon {
+  margin-left: 1rem;
+}

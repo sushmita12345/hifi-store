@@ -13,11 +13,12 @@ export function Login() {
 
     const loginHandler = async (e)  => {
         e.preventDefault();
-        try {
+        // try {
+        //     debugger;
             const {status, data: {foundUser, encodedToken}} = await axios.post(`/api/auth/login`, loginForm
 
             );
-            // saving the encodedToken in the localStorage
+
 
             localStorage.setItem("login-token", encodedToken);
             localStorage.setItem("user", JSON.stringify(foundUser));
@@ -27,9 +28,9 @@ export function Login() {
             if(encodedToken){
                 navigate("/product")
             }
-        } catch (error) {
-            console.log(error);
-        }       
+        // } catch (error) {
+        //     console.log(error);
+        // }       
         
     }
    

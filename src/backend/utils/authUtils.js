@@ -6,8 +6,8 @@ export const requiresAuth = function (request) {
   const encodedToken = request.requestHeaders.authorization;
   const decodedToken = jwt.verify(
     encodedToken,
-    // process.env.REACT_APP_JWT_SECRET
-    "test123"
+    process.env.REACT_APP_JWT_SECRET
+    // "test123"
   );
   if (decodedToken) {
     const user = this.db.users.findBy({ email: decodedToken.email });

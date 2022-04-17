@@ -3,7 +3,6 @@
 .container {
   height: 100%;
   display: grid;
-  grid-gap: 4rem;
   padding-top: 4rem;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 65rem 25rem;
@@ -19,6 +18,7 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .upper-section-1,
@@ -68,19 +68,13 @@
 
 .upper-btn {
   width: 80%;
-  height: 100%;
   position: absolute;
   top: 10rem;
-  right: 2rem;
+  left: 3rem;
   text-align: center;
   border: none;
   color: var(--white-shade);
   cursor: pointer;
-}
-
-.mid-main {
-  grid-area: m;
-  position: relative;
 }
 
 .main-image {
@@ -90,6 +84,12 @@
   display: block;
   object-fit: contain;
   background-color: var(--white-shade);
+  padding-bottom: 3rem;
+}
+
+.mid-main {
+  grid-area: m;
+  position: relative;
 }
 
 .mid-main-content-wrapper {
@@ -107,6 +107,11 @@
   opacity: 0.5;
   border-radius: 10px;
 }
+
+.mid-main-sub-wrapper {
+  position: relative;
+}
+
 .mid-main-content-wrapper:hover {
   opacity: 0.6;
   transition: ease-in-out 0.2s;
@@ -116,13 +121,14 @@
   font-size: 3rem;
   color: black;
   letter-spacing: 1px;
+  position: absolute;
 }
 
 .lower-section-1 {
   grid-area: l1;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border: none;
-  width: 100%;
+  width: 95%;
 }
 
 .lower-section-1:hover {
@@ -140,73 +146,31 @@
 .lower-section-2 {
   grid-area: l2;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  width: 100%;
+  width: 95%;
 }
 
 .lower-section-2:hover {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-@media only screen and (max-width: 1140px) {
+@media only screen and (max-width: 1040px) {
   .container {
     height: 100%;
     display: grid;
-    grid-gap: 3rem;
     padding-top: 4rem;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 65rem 25rem 25rem;
     grid-template-areas:
-      /* ". u1 u1 u2 u2 u3 u3 u4 u4 u5 u5 ." */
-      ". m m m m m m m m m m ."
-      ". l1 l1 l1 l1 l1 l2 l2 l2 l2 l2 .";
-  }
-
-  .upper-image {
-    height: 100%;
-  }
-
-  .main-image {
-    height: 100%;
-    width: 100%;
-  }
-
-  .upper-btn {
-    position: absolute;
-    top: 6.5rem;
-    left: 0px;
-    border: none;
-    cursor: pointer;
-  }
-
-  .lower-card-img {
-    height: 100%;
-  }
-}
-
-@media only screen and (max-width: 900px) {
-  .container {
-    height: 100%;
-    display: grid;
-    grid-gap: 3rem;
-    padding-top: 4rem;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 65rem 25rem 25rem;
-    grid-template-areas:
-      /* ". u1 u1 u2 u2 u3 u3 u4 u4 u5 u5 ." */
       ". m m m m m m m m m m ."
       ". l1 l1 l1 l1 l1 l1 l1 l1 l1 l1 ."
       ". l2 l2 l2 l2 l2 l2 l2 l2 l2 l2 .";
   }
 
-  .upper-image {
-    height: 15rem;
-  }
-
   .upper-btn {
     position: absolute;
-    top: 6.5rem;
-    left: 0px;
-    border: none;
+    top: 10rem;
+    left: 2rem;
+    font-size: 2rem;
   }
 
   .lower-card-img {
@@ -214,7 +178,7 @@
   }
 }
 
-@media only screen and (max-width: 645px) {
+@media only screen and (max-width: 640px) {
   nav {
     display: flex;
     align-items: center;
@@ -227,7 +191,7 @@
   }
 
   .search-bar {
-    width: 12rem;
+    width: 15rem;
     height: 3.5rem;
     font-size: 1.2rem;
   }
@@ -246,52 +210,68 @@
     font-size: 2.5rem;
   }
 
-  .upper-image {
-    height: 9rem;
+  .upper-section-1,
+  .upper-section-2,
+  .upper-section-3,
+  .upper-section-4 {
+    height: 30vh;
+    width: 50vw;
+  }
+
+  .lower-section-1,
+  .lower-section-2 {
+    width: 80vw;
+  }
+
+  .lower-content-2 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .content-1 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 5rem;
+    width: 100%;
+  }
+
+  .content-2 {
+    font-size: 1rem;
+    font-weight: 300;
+    width: 100%;
   }
 
   .container {
     height: 100%;
     display: grid;
-    grid-gap: 3rem;
     padding-top: 4rem;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 65rem 25rem 25rem;
     grid-template-areas:
-      /* ". u1 u1 u2 u2 u3 u3 u4 u4 u5 u5 ." */
-      ". m m m m m m m m m m ."
+      "m m m m m m m m m m m m"
       ". l1 l1 l1 l1 l1 l1 l1 l1 l1 l1 ."
       ". l2 l2 l2 l2 l2 l2 l2 l2 l2 l2 .";
   }
-
-  .upper-btn {
-    max-width: 8.2rem;
-    height: 2.2rem;
-    position: absolute;
-    top: 3.8rem;
-    left: 0px;
-    border: none;
-    font-size: 8px;
-    background-color: var(--white);
-  }
 }
 
-@media only screen and (max-width: 340px) {
+@media only screen and (max-width: 360px) {
   nav {
     display: flex;
     align-items: center;
     height: 6rem;
+    width: 100%;
   }
 
   .logo {
-    height: 2rem;
-    width: 2rem;
+    height: 3rem;
+    width: 3rem;
   }
 
   .search-bar {
-    width: 8rem;
-    height: 3rem;
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .nav-btn {
@@ -308,32 +288,45 @@
     font-size: 2rem;
   }
 
-  .upper-image {
-    height: 9rem;
+  .upper-section-1,
+  .upper-section-2,
+  .upper-section-3,
+  .upper-section-4 {
+    height: 30vh;
+    width: 50vw;
+  }
+
+  .main-image {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .container {
     height: 100%;
     display: grid;
-    grid-gap: 3rem;
     padding-top: 4rem;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 65rem 25rem 25rem;
+    grid-template-rows: 40rem 25rem 25rem;
     grid-template-areas:
-      /* "u1 u1 u1 u2 u2 u2 u3 u3 u3 u4 u4 u4" */
-      ". m m m m m m m m m m ."
+      "m m m m m m m m m m m m"
       ". l1 l1 l1 l1 l1 l1 l1 l1 l1 l1 ."
       ". l2 l2 l2 l2 l2 l2 l2 l2 l2 l2 .";
   }
 
+  .lower-section-1,
+  .lower-section-2 {
+    width: 80vw;
+  }
+
   .upper-image {
-    height: 7rem;
-    max-width: 3rem;
     object-fit: contain;
   }
 
   .lower-content-2 {
-    height: 18rem;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -343,18 +336,19 @@
     font-size: 1.4rem;
     font-weight: 600;
     margin-top: 5rem;
+    width: 100%;
   }
 
   .content-2 {
     font-size: 1rem;
     font-weight: 300;
+    width: 100%;
   }
 
   .upper-btn {
     position: absolute;
-    top: 3rem;
-    left: 0px;
-    border: none;
+    text-align: center;
+    left: 2rem;
   }
 
   .lower-content-1 {

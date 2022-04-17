@@ -27,7 +27,6 @@ const CartProvider = ({children}) => {
                             authorization: token,
                         }                   
                     })
-                    console.log(cart)
                     cartDispatch({type: "GET_CARTITEM_FROM_BACKEND_DATA", payload: cart})
                 }catch(error){
                 console.log(error);
@@ -41,15 +40,16 @@ const CartProvider = ({children}) => {
             return 
         }else {
             (async() => {
+                
                 try {
-                    const {status, data: {cart}} = await axios.post("api/user/cart", {product}, {
+                    const {status, data: {cart}} = await axios.post("/api/user/cart", {product}, {
                         headers: {
                             authorization: token,
                         }
                     })
 
                     // status = 201 ? alert("Added to cart") : null
-                    cartDispatch({type: "ADD_TO_CART", payload: cart, productId: product._id},)
+                    cartDispatch({type: "ADD_TO_CART", payload: cart, productId: product._id})
                     
                 } catch(error){
                     console.log(error)

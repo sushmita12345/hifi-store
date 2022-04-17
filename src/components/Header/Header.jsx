@@ -14,7 +14,6 @@ export function Header() {
     const {catProduct} = CategoryCardApi()
     const navigate = useNavigate();
     const {filterDispatch} = useProduct();
-    console.log(catProduct)
     
     return (
 

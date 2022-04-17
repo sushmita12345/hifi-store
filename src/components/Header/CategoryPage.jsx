@@ -11,15 +11,16 @@ export function CategoryPage() {
 
             <main className="mid-main">
                 <img className="main-image" src={mainImage} />
-                <div className="mid-main-content-wrapper">
+                {/* add Later */}
+                {/* <div className="mid-main-content-wrapper">
                     
-                    
-                    <h1 className="mid-main-content-a">Festive Season</h1>
-                    <h2 className="mid-main-content-a">SALE IS LIVE!</h2>
-                    <h2 className="mid-main-content-a">20-80% OFF</h2>
+                    <div className="mid-main-sub-wrapper">
+                        <h1 className="mid-main-content-a">Festive Season</h1>
+                        <h2 className="mid-main-content-a">SALE IS LIVE!</h2>
+                        <h2 className="mid-main-content-a">20-80% OFF</h2>
+                    </div>
                 
-                
-                </div>
+                </div> */}
             </main>
 
             <div className="lower-section-1">

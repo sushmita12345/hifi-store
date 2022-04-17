@@ -27,7 +27,6 @@ const CartProvider = ({children}) => {
                             authorization: token,
                         }                   
                     })
-                    console.log(cart)
                     cartDispatch({type: "GET_CARTITEM_FROM_BACKEND_DATA", payload: cart})
                 }catch(error){
                 console.log(error);

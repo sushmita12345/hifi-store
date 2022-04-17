@@ -62,8 +62,9 @@ export function Login() {
                     
                     <span class="login-forget">Forget your password?</span>
                 </div>
-                <button class="login-btn" type="submit" onClick={() => setLoginForm({email: "adarshbalika@gmail.com", password: "adarshBalika123"})}
-                    >Login</button>
+
+                <button class="login-btn" onClick={() => setLoginForm({email: "adarshbalika@gmail.com", password: "adarshBalika123"})}
+                    >Login as Guest</button>
                 <Link to="/signup"><span class="login-account">Create New Account</span></Link>
                 
             </form> 
